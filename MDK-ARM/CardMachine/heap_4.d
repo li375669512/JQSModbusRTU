@@ -1,0 +1,13 @@
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.c
+cardmachine\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+cardmachine\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+cardmachine\heap_4.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+cardmachine\heap_4.o: ../Core/Inc/FreeRTOSConfig.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+cardmachine\heap_4.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h

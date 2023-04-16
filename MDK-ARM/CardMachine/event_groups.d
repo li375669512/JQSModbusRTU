@@ -1,0 +1,15 @@
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+cardmachine\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+cardmachine\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+cardmachine\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+cardmachine\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+cardmachine\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

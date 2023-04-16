@@ -1,0 +1,12 @@
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/list.c
+cardmachine\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+cardmachine\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+cardmachine\list.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+cardmachine\list.o: ../Core/Inc/FreeRTOSConfig.h
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+cardmachine\list.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
