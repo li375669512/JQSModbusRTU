@@ -331,11 +331,12 @@ ARM Macro Assembler    Page 6
 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M0 --apcs=interw
 ork --depend=cardmachine\startup_stm32f030x6.d -ocardmachine\startup_stm32f030x
-6.o -I..\Core\Inc -I.\RTE\_CardMachine -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.5.1\CM
-SIS\Core\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\D
-evice\ST\STM32F0xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISI
-ON_VERSION SETA 528" --predefine="_RTE_ SETA 1" --predefine="STM32F030x6 SETA 1
-" --list=startup_stm32f030x6.lst startup_stm32f030x6.s
+6.o -I..\Core\Inc -I.\RTE\_CardMachine -IC:\Users\37566\AppData\Local\Arm\Packs
+\ARM\CMSIS\5.9.0\CMSIS\Core\Include -IC:\Users\37566\AppData\Local\Arm\Packs\Ke
+il\STM32F0xx_DFP\2.1.1\Drivers\CMSIS\Device\ST\STM32F0xx\Include --predefine="_
+_MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 537" --predefine="_RTE_ S
+ETA 1" --predefine="STM32F030x6 SETA 1" --predefine="_RTE_ SETA 1" --list=start
+up_stm32f030x6.lst startup_stm32f030x6.s
 
 
 

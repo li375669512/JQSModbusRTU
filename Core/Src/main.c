@@ -288,6 +288,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 
+uint32_t last_led_tick;
 /* USER CODE END 4 */
 
 /* USER CODE BEGIN Header_StartDefaultTask */
@@ -306,7 +307,8 @@ void StartDefaultTask(void const * argument)
   for(;;)
   {
     
-    if (HAL_GetTick() % 500 == 0) {
+    if ((HAL_GetTick() - last_led_tick) > 500) {
+				last_led_tick = HAL_GetTick();
         HAL_GPIO_TogglePin(LED0_GPIO_Port, LED0_Pin);
     }
     

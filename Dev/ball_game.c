@@ -12,6 +12,9 @@
 #define LED_ON()				(HAL_GPIO_WritePin(Relay3_GPIO_Port, Relay3_Pin, GPIO_PIN_SET))
 #define LED_OFF()				(HAL_GPIO_WritePin(Relay3_GPIO_Port, Relay3_Pin, GPIO_PIN_RESET))
 
+#define EFFECT_SND_NUM	11
+#define MUSIC_NUM				2
+
 
 enum eErrCode
 {
@@ -103,12 +106,12 @@ int sound_stop(void)
 uint8_t com_rx_cb_play_finished(uint8_t *buf)
 {
     if (effect_played) {
-        minute = 1;                                    // 收到了音乐播放完成反馈，你们2分钟后再播放背景音乐
+        minute = 1;                                    	// 收到了音乐播放完成反馈，你们2分钟后再播放背景音乐
     }
     if (music_played) {
         minute = 2; 
     }
-    last_play_tick = HAL_GetTick();          // 播放时间重置
+    last_play_tick = HAL_GetTick();          						// 播放时间重置
     return 0;
 }
 
@@ -122,10 +125,10 @@ void ball_game_period_callback(void)
 {
 		// 收到了游戏结束信号
 		if (key_ball_sig() == 1) {
-        last_play_tick = HAL_GetTick();     // 重置音乐播放时间
+        last_play_tick = HAL_GetTick();     										// 重置音乐播放时间
         effect_played = 1;
       
-        if (music_played) {
+        if (music_played) {																			// 播放背景音乐中，先停止播放，然后把声音设大
             music_played = 0;
             sound_stop();
             HAL_Delay(50);
@@ -134,7 +137,7 @@ void ball_game_period_callback(void)
         }
         
         score_get = 1;
-				sound_play_sndx(2, abs(rand())%5 + 1);	  // 播放音效
+				sound_play_sndx(2, abs(rand())%11 + 1);	  							// 播放音效
 		}
     
     // 音效或者音乐播放完后，过一阵子再播放音乐。
@@ -145,7 +148,7 @@ void ball_game_period_callback(void)
         last_play_tick = HAL_GetTick();
         music_played = 1;
         
-        if (effect_played) {
+        if (effect_played) {									  								// 播放进球音效中，先停止播放，然后把声音设小，避免正在播放的音效声音听起来突然变小
             effect_played = 0;
             sound_stop();
             HAL_Delay(50);
@@ -153,10 +156,10 @@ void ball_game_period_callback(void)
             HAL_Delay(50);
         }
         
-				sound_play_sndx(1, abs(rand())%2 + 1);	// 播放背景音乐
+				sound_play_sndx(1, abs(rand())%MUSIC_NUM + 1);					// 播放背景音乐
     }
     
-    if (score_get) {
+    if (score_get) {																						// 得分后，LED闪烁
         
         if ((HAL_GetTick() - last_score_tick) > 200) {
             last_score_tick = HAL_GetTick();
