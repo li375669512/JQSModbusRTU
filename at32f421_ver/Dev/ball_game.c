@@ -157,6 +157,7 @@ void ball_game_period_callback(void)
 				sound_play_sndx(1, abs(rand())%MUSIC_NUM + 1);					// ²¥·Å±³¾°ÒôÀÖ
     }
     
+    static uint8_t led_idle_step;
     if (score_get) {																						// µÃ·Öºó£¬LEDÉÁË¸
         
         if ((HAL_GetTick() - last_score_tick) > 200) {
@@ -170,6 +171,28 @@ void ball_game_period_callback(void)
             }
             if (led_step >= 4) {
                 score_get = 0;
+                led_idle_step = 0;
+            }
+        }
+    } else {                                                    // ¿ÕÏÐµÄÊ±ºò£¬ÂýÂýÉÁË¸
+        static uint32_t last_led_tick = 0;
+        static uint8_t sw;
+        
+        if (led_idle_step == 0) {
+            if ((HAL_GetTick() - last_led_tick) >= 3000) {
+                // last_led_tick = HAL_GetTick();
+                led_idle_step = 1;
+                sw = 0;
+            }
+        } else if (led_idle_step == 1) {
+            if ((HAL_GetTick() - last_led_tick) >= 3000) {
+                last_led_tick = HAL_GetTick();
+                sw ^= 1;
+                if (sw) {
+                    LED_ON();
+                } else {
+                    LED_OFF();
+                }
             }
         }
     }
