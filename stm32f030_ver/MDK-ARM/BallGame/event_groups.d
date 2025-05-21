@@ -1,0 +1,15 @@
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/event_groups.c
+ballgame\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ballgame\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+ballgame\event_groups.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ballgame\event_groups.o: ../Core/Inc/FreeRTOSConfig.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h
+ballgame\event_groups.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h

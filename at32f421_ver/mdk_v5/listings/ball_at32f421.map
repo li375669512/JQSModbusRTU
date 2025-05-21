@@ -6,7 +6,6 @@ Section Cross References
 
     at32f421_clock.o(i.system_clock_config) refers to at32f421_crm.o(i.crm_reset) for crm_reset
     at32f421_clock.o(i.system_clock_config) refers to at32f421_crm.o(i.crm_clock_source_enable) for crm_clock_source_enable
-    at32f421_clock.o(i.system_clock_config) refers to at32f421_crm.o(i.crm_hext_stable_wait) for crm_hext_stable_wait
     at32f421_clock.o(i.system_clock_config) refers to at32f421_crm.o(i.crm_pll_config) for crm_pll_config
     at32f421_clock.o(i.system_clock_config) refers to at32f421_crm.o(i.crm_flag_get) for crm_flag_get
     at32f421_clock.o(i.system_clock_config) refers to at32f421_crm.o(i.crm_ahb_div_set) for crm_ahb_div_set
@@ -691,6 +690,7 @@ Removing Unused input sections from the image.
     Removing at32f421_crm.o(i.crm_ertc_clock_select), (20 bytes).
     Removing at32f421_crm.o(i.crm_flag_clear), (212 bytes).
     Removing at32f421_crm.o(i.crm_hext_bypass), (20 bytes).
+    Removing at32f421_crm.o(i.crm_hext_stable_wait), (46 bytes).
     Removing at32f421_crm.o(i.crm_hick_clock_calibration_set), (40 bytes).
     Removing at32f421_crm.o(i.crm_hick_clock_trimming_set), (20 bytes).
     Removing at32f421_crm.o(i.crm_hick_divider_select), (20 bytes).
@@ -805,7 +805,7 @@ Removing Unused input sections from the image.
     Removing ball_game.o(.rrx_text), (6 bytes).
     Removing ball_game.o(i.ball_game_init), (2 bytes).
 
-430 unused section(s) (total 14640 bytes) removed from the image.
+431 unused section(s) (total 14686 bytes) removed from the image.
 
 ==============================================================================
 
@@ -815,34 +815,34 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit2.o ABSOLUTE
-    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit3.o ABSOLUTE
     ../clib/angel/boardlib.s                 0x00000000   Number         0  boardshut.o ABSOLUTE
-    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/boardlib.s                 0x00000000   Number         0  boardinit1.o ABSOLUTE
     ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_zi.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
+    ../clib/angel/handlers.s                 0x00000000   Number         0  __scatter_copy.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit2.o ABSOLUTE
+    ../clib/angel/kernel.s                   0x00000000   Number         0  rtexit.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry2.o ABSOLUTE
     ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry4.o ABSOLUTE
-    ../clib/angel/kernel.s                   0x00000000   Number         0  __rtentry.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
-    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
     ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  aeabi_ldiv0_sigfpe.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_div0.o ABSOLUTE
+    ../clib/angel/rt.s                       0x00000000   Number         0  rt_raise.o ABSOLUTE
     ../clib/angel/scatter.s                  0x00000000   Number         0  __scatter.o ABSOLUTE
     ../clib/angel/startup.s                  0x00000000   Number         0  __main.o ABSOLUTE
-    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  indicate_semi.o ABSOLUTE
+    ../clib/angel/sys.s                      0x00000000   Number         0  use_no_semi.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  libspace.o ABSOLUTE
     ../clib/angel/sys.s                      0x00000000   Number         0  sys_stackheap_outer.o ABSOLUTE
-    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_command.o ABSOLUTE
+    ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_exit.o ABSOLUTE
     ../clib/angel/sysapp.c                   0x00000000   Number         0  sys_wrch.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  argv_veneer.o ABSOLUTE
-    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/armsys.c                         0x00000000   Number         0  no_argv.o ABSOLUTE
+    ../clib/armsys.c                         0x00000000   Number         0  _get_argv_nomalloc.o ABSOLUTE
     ../clib/heapalloc.c                      0x00000000   Number         0  hrguard.o ABSOLUTE
     ../clib/heapaux.c                        0x00000000   Number         0  heapauxi.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libinit2.o ABSOLUTE
@@ -850,22 +850,22 @@ Image Symbol Table
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown2.o ABSOLUTE
     ../clib/libinit.s                        0x00000000   Number         0  libshutdown.o ABSOLUTE
     ../clib/longlong.s                       0x00000000   Number         0  lludivv7m.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
-    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_cppl_inner.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_outer.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_other.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_exit.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_segv_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_fpe_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_pvfn_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_stak_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtred_inner.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_rtmem_formal.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  __raise.o ABSOLUTE
     ../clib/signal.c                         0x00000000   Number         0  defsig_general.o ABSOLUTE
+    ../clib/signal.c                         0x00000000   Number         0  defsig_abrt_inner.o ABSOLUTE
     ../clib/signal.s                         0x00000000   Number         0  defsig.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  rand.o ABSOLUTE
     ../clib/stdlib.c                         0x00000000   Number         0  rand.o ABSOLUTE
@@ -1011,62 +1011,61 @@ Image Symbol Table
     i.crm_clock_source_enable                0x0800088c   Section        0  at32f421_crm.o(i.crm_clock_source_enable)
     i.crm_clocks_freq_get                    0x080008ec   Section        0  at32f421_crm.o(i.crm_clocks_freq_get)
     i.crm_flag_get                           0x08000a98   Section        0  at32f421_crm.o(i.crm_flag_get)
-    i.crm_hext_stable_wait                   0x08000ac8   Section        0  at32f421_crm.o(i.crm_hext_stable_wait)
-    i.crm_periph_clock_enable                0x08000af8   Section        0  at32f421_crm.o(i.crm_periph_clock_enable)
-    i.crm_pll_config                         0x08000b3c   Section        0  at32f421_crm.o(i.crm_pll_config)
-    i.crm_reset                              0x08000c50   Section        0  at32f421_crm.o(i.crm_reset)
-    i.crm_sysclk_switch                      0x08000cb4   Section        0  at32f421_crm.o(i.crm_sysclk_switch)
-    i.crm_sysclk_switch_status_get           0x08000cc8   Section        0  at32f421_crm.o(i.crm_sysclk_switch_status_get)
-    i.delay_init                             0x08000cd8   Section        0  main.o(i.delay_init)
-    i.delay_ms                               0x08000d10   Section        0  main.o(i.delay_ms)
-    i.gpio_bits_write                        0x08000d84   Section        0  at32f421_gpio.o(i.gpio_bits_write)
-    i.gpio_configuration                     0x08000d90   Section        0  main.o(i.gpio_configuration)
-    i.gpio_default_para_init                 0x08000e10   Section        0  at32f421_gpio.o(i.gpio_default_para_init)
-    i.gpio_init                              0x08000e24   Section        0  at32f421_gpio.o(i.gpio_init)
-    i.gpio_input_data_bit_read               0x08000e9e   Section        0  at32f421_gpio.o(i.gpio_input_data_bit_read)
-    i.gpio_pin_mux_config                    0x08000eb0   Section        0  at32f421_gpio.o(i.gpio_pin_mux_config)
-    i.key_ball_sig                           0x08000ef4   Section        0  key.o(i.key_ball_sig)
-    i.main                                   0x08000f60   Section        0  main.o(i.main)
-    i.nvic_irq_enable                        0x08001034   Section        0  at32f421_misc.o(i.nvic_irq_enable)
-    i.nvic_priority_group_config             0x080010fc   Section        0  at32f421_misc.o(i.nvic_priority_group_config)
-    i.sound_play_sndx                        0x08001124   Section        0  ball_game.o(i.sound_play_sndx)
-    i.sound_set_volume                       0x08001164   Section        0  ball_game.o(i.sound_set_volume)
-    i.sound_stop                             0x08001194   Section        0  ball_game.o(i.sound_stop)
-    i.system_clock_config                    0x080011c0   Section        0  at32f421_clock.o(i.system_clock_config)
-    i.system_core_clock_update               0x08001234   Section        0  system_at32f421.o(i.system_core_clock_update)
-    i.systick_clock_source_config            0x08001388   Section        0  at32f421_misc.o(i.systick_clock_source_config)
-    i.tmr_base_init                          0x080013b0   Section        0  at32f421_tmr.o(i.tmr_base_init)
-    i.tmr_cnt_dir_set                        0x080013c0   Section        0  at32f421_tmr.o(i.tmr_cnt_dir_set)
-    i.tmr_counter_enable                     0x080013ca   Section        0  at32f421_tmr.o(i.tmr_counter_enable)
-    i.tmr_flag_clear                         0x080013d4   Section        0  at32f421_tmr.o(i.tmr_flag_clear)
-    i.tmr_flag_get                           0x080013da   Section        0  at32f421_tmr.o(i.tmr_flag_get)
-    i.tmr_interrupt_enable                   0x080013ec   Section        0  at32f421_tmr.o(i.tmr_interrupt_enable)
-    i.uart_dis_tx_en_rx                      0x08001404   Section        0  uart.o(i.uart_dis_tx_en_rx)
-    i.uart_init                              0x08001440   Section        0  uart.o(i.uart_init)
-    i.uart_rd_ring_buff                      0x0800145c   Section        0  uart.o(i.uart_rd_ring_buff)
-    i.uart_ring_buff_init                    0x0800149c   Section        0  uart.o(i.uart_ring_buff_init)
-    i.uart_rx_process_is_time_out            0x080014ac   Section        0  uart.o(i.uart_rx_process_is_time_out)
-    i.uart_rx_process_start_cnt              0x080014d0   Section        0  uart.o(i.uart_rx_process_start_cnt)
-    i.uart_rx_process_tmr_cnt                0x080014e4   Section        0  uart.o(i.uart_rx_process_tmr_cnt)
-    i.uart_send_data                         0x0800150c   Section        0  uart.o(i.uart_send_data)
-    i.uart_wr_ring_buff                      0x0800156c   Section        0  uart.o(i.uart_wr_ring_buff)
-    i.usart_configuration                    0x080015a8   Section        0  main.o(i.usart_configuration)
-    i.usart_data_receive                     0x0800163c   Section        0  at32f421_usart.o(i.usart_data_receive)
-    i.usart_data_transmit                    0x08001644   Section        0  at32f421_usart.o(i.usart_data_transmit)
-    i.usart_enable                           0x0800164c   Section        0  at32f421_usart.o(i.usart_enable)
-    i.usart_flag_get                         0x08001656   Section        0  at32f421_usart.o(i.usart_flag_get)
-    i.usart_init                             0x08001668   Section        0  at32f421_usart.o(i.usart_init)
-    i.usart_interrupt_enable                 0x080016d4   Section        0  at32f421_usart.o(i.usart_interrupt_enable)
-    i.usart_receiver_enable                  0x0800170a   Section        0  at32f421_usart.o(i.usart_receiver_enable)
-    i.usart_transmitter_enable               0x08001714   Section        0  at32f421_usart.o(i.usart_transmitter_enable)
-    .constdata                               0x08001720   Section       16  uart.o(.constdata)
-    .constdata                               0x08001730   Section       40  at32f421_crm.o(.constdata)
-    sclk_ahb_div_table                       0x08001730   Data          16  at32f421_crm.o(.constdata)
-    ahb_apb1_div_table                       0x08001740   Data           8  at32f421_crm.o(.constdata)
-    ahb_apb2_div_table                       0x08001748   Data           8  at32f421_crm.o(.constdata)
-    adc_div_table                            0x08001750   Data           8  at32f421_crm.o(.constdata)
-    .constdata                               0x08001758   Section       16  system_at32f421.o(.constdata)
-    sys_ahb_div_table                        0x08001758   Data          16  system_at32f421.o(.constdata)
+    i.crm_periph_clock_enable                0x08000ac8   Section        0  at32f421_crm.o(i.crm_periph_clock_enable)
+    i.crm_pll_config                         0x08000b0c   Section        0  at32f421_crm.o(i.crm_pll_config)
+    i.crm_reset                              0x08000c20   Section        0  at32f421_crm.o(i.crm_reset)
+    i.crm_sysclk_switch                      0x08000c84   Section        0  at32f421_crm.o(i.crm_sysclk_switch)
+    i.crm_sysclk_switch_status_get           0x08000c98   Section        0  at32f421_crm.o(i.crm_sysclk_switch_status_get)
+    i.delay_init                             0x08000ca8   Section        0  main.o(i.delay_init)
+    i.delay_ms                               0x08000ce0   Section        0  main.o(i.delay_ms)
+    i.gpio_bits_write                        0x08000d54   Section        0  at32f421_gpio.o(i.gpio_bits_write)
+    i.gpio_configuration                     0x08000d60   Section        0  main.o(i.gpio_configuration)
+    i.gpio_default_para_init                 0x08000de0   Section        0  at32f421_gpio.o(i.gpio_default_para_init)
+    i.gpio_init                              0x08000df4   Section        0  at32f421_gpio.o(i.gpio_init)
+    i.gpio_input_data_bit_read               0x08000e6e   Section        0  at32f421_gpio.o(i.gpio_input_data_bit_read)
+    i.gpio_pin_mux_config                    0x08000e80   Section        0  at32f421_gpio.o(i.gpio_pin_mux_config)
+    i.key_ball_sig                           0x08000ec4   Section        0  key.o(i.key_ball_sig)
+    i.main                                   0x08000f30   Section        0  main.o(i.main)
+    i.nvic_irq_enable                        0x08001004   Section        0  at32f421_misc.o(i.nvic_irq_enable)
+    i.nvic_priority_group_config             0x080010cc   Section        0  at32f421_misc.o(i.nvic_priority_group_config)
+    i.sound_play_sndx                        0x080010f4   Section        0  ball_game.o(i.sound_play_sndx)
+    i.sound_set_volume                       0x08001134   Section        0  ball_game.o(i.sound_set_volume)
+    i.sound_stop                             0x08001164   Section        0  ball_game.o(i.sound_stop)
+    i.system_clock_config                    0x08001190   Section        0  at32f421_clock.o(i.system_clock_config)
+    i.system_core_clock_update               0x080011fc   Section        0  system_at32f421.o(i.system_core_clock_update)
+    i.systick_clock_source_config            0x08001350   Section        0  at32f421_misc.o(i.systick_clock_source_config)
+    i.tmr_base_init                          0x08001378   Section        0  at32f421_tmr.o(i.tmr_base_init)
+    i.tmr_cnt_dir_set                        0x08001388   Section        0  at32f421_tmr.o(i.tmr_cnt_dir_set)
+    i.tmr_counter_enable                     0x08001392   Section        0  at32f421_tmr.o(i.tmr_counter_enable)
+    i.tmr_flag_clear                         0x0800139c   Section        0  at32f421_tmr.o(i.tmr_flag_clear)
+    i.tmr_flag_get                           0x080013a2   Section        0  at32f421_tmr.o(i.tmr_flag_get)
+    i.tmr_interrupt_enable                   0x080013b4   Section        0  at32f421_tmr.o(i.tmr_interrupt_enable)
+    i.uart_dis_tx_en_rx                      0x080013cc   Section        0  uart.o(i.uart_dis_tx_en_rx)
+    i.uart_init                              0x08001408   Section        0  uart.o(i.uart_init)
+    i.uart_rd_ring_buff                      0x08001424   Section        0  uart.o(i.uart_rd_ring_buff)
+    i.uart_ring_buff_init                    0x08001464   Section        0  uart.o(i.uart_ring_buff_init)
+    i.uart_rx_process_is_time_out            0x08001474   Section        0  uart.o(i.uart_rx_process_is_time_out)
+    i.uart_rx_process_start_cnt              0x08001498   Section        0  uart.o(i.uart_rx_process_start_cnt)
+    i.uart_rx_process_tmr_cnt                0x080014ac   Section        0  uart.o(i.uart_rx_process_tmr_cnt)
+    i.uart_send_data                         0x080014d4   Section        0  uart.o(i.uart_send_data)
+    i.uart_wr_ring_buff                      0x08001534   Section        0  uart.o(i.uart_wr_ring_buff)
+    i.usart_configuration                    0x08001570   Section        0  main.o(i.usart_configuration)
+    i.usart_data_receive                     0x08001604   Section        0  at32f421_usart.o(i.usart_data_receive)
+    i.usart_data_transmit                    0x0800160c   Section        0  at32f421_usart.o(i.usart_data_transmit)
+    i.usart_enable                           0x08001614   Section        0  at32f421_usart.o(i.usart_enable)
+    i.usart_flag_get                         0x0800161e   Section        0  at32f421_usart.o(i.usart_flag_get)
+    i.usart_init                             0x08001630   Section        0  at32f421_usart.o(i.usart_init)
+    i.usart_interrupt_enable                 0x0800169c   Section        0  at32f421_usart.o(i.usart_interrupt_enable)
+    i.usart_receiver_enable                  0x080016d2   Section        0  at32f421_usart.o(i.usart_receiver_enable)
+    i.usart_transmitter_enable               0x080016dc   Section        0  at32f421_usart.o(i.usart_transmitter_enable)
+    .constdata                               0x080016e8   Section       16  uart.o(.constdata)
+    .constdata                               0x080016f8   Section       40  at32f421_crm.o(.constdata)
+    sclk_ahb_div_table                       0x080016f8   Data          16  at32f421_crm.o(.constdata)
+    ahb_apb1_div_table                       0x08001708   Data           8  at32f421_crm.o(.constdata)
+    ahb_apb2_div_table                       0x08001710   Data           8  at32f421_crm.o(.constdata)
+    adc_div_table                            0x08001718   Data           8  at32f421_crm.o(.constdata)
+    .constdata                               0x08001720   Section       16  system_at32f421.o(.constdata)
+    sys_ahb_div_table                        0x08001720   Data          16  system_at32f421.o(.constdata)
     .data                                    0x20000000   Section       20  main.o(.data)
     led_sw                                   0x20000000   Data           1  main.o(.data)
     last_led_tick                            0x20000004   Data           4  main.o(.data)
@@ -1256,57 +1255,56 @@ Image Symbol Table
     crm_clock_source_enable                  0x0800088d   Thumb Code    90  at32f421_crm.o(i.crm_clock_source_enable)
     crm_clocks_freq_get                      0x080008ed   Thumb Code   396  at32f421_crm.o(i.crm_clocks_freq_get)
     crm_flag_get                             0x08000a99   Thumb Code    42  at32f421_crm.o(i.crm_flag_get)
-    crm_hext_stable_wait                     0x08000ac9   Thumb Code    46  at32f421_crm.o(i.crm_hext_stable_wait)
-    crm_periph_clock_enable                  0x08000af9   Thumb Code    62  at32f421_crm.o(i.crm_periph_clock_enable)
-    crm_pll_config                           0x08000b3d   Thumb Code   224  at32f421_crm.o(i.crm_pll_config)
-    crm_reset                                0x08000c51   Thumb Code    90  at32f421_crm.o(i.crm_reset)
-    crm_sysclk_switch                        0x08000cb5   Thumb Code    14  at32f421_crm.o(i.crm_sysclk_switch)
-    crm_sysclk_switch_status_get             0x08000cc9   Thumb Code    10  at32f421_crm.o(i.crm_sysclk_switch_status_get)
-    delay_init                               0x08000cd9   Thumb Code    38  main.o(i.delay_init)
-    delay_ms                                 0x08000d11   Thumb Code   110  main.o(i.delay_ms)
-    gpio_bits_write                          0x08000d85   Thumb Code    10  at32f421_gpio.o(i.gpio_bits_write)
-    gpio_configuration                       0x08000d91   Thumb Code   122  main.o(i.gpio_configuration)
-    gpio_default_para_init                   0x08000e11   Thumb Code    20  at32f421_gpio.o(i.gpio_default_para_init)
-    gpio_init                                0x08000e25   Thumb Code   122  at32f421_gpio.o(i.gpio_init)
-    gpio_input_data_bit_read                 0x08000e9f   Thumb Code    18  at32f421_gpio.o(i.gpio_input_data_bit_read)
-    gpio_pin_mux_config                      0x08000eb1   Thumb Code    66  at32f421_gpio.o(i.gpio_pin_mux_config)
-    key_ball_sig                             0x08000ef5   Thumb Code    96  key.o(i.key_ball_sig)
-    main                                     0x08000f61   Thumb Code   190  main.o(i.main)
-    nvic_irq_enable                          0x08001035   Thumb Code   190  at32f421_misc.o(i.nvic_irq_enable)
-    nvic_priority_group_config               0x080010fd   Thumb Code    32  at32f421_misc.o(i.nvic_priority_group_config)
-    sound_play_sndx                          0x08001125   Thumb Code    46  ball_game.o(i.sound_play_sndx)
-    sound_set_volume                         0x08001165   Thumb Code    36  ball_game.o(i.sound_set_volume)
-    sound_stop                               0x08001195   Thumb Code    32  ball_game.o(i.sound_stop)
-    system_clock_config                      0x080011c1   Thumb Code   112  at32f421_clock.o(i.system_clock_config)
-    system_core_clock_update                 0x08001235   Thumb Code   316  system_at32f421.o(i.system_core_clock_update)
-    systick_clock_source_config              0x08001389   Thumb Code    40  at32f421_misc.o(i.systick_clock_source_config)
-    tmr_base_init                            0x080013b1   Thumb Code    16  at32f421_tmr.o(i.tmr_base_init)
-    tmr_cnt_dir_set                          0x080013c1   Thumb Code    10  at32f421_tmr.o(i.tmr_cnt_dir_set)
-    tmr_counter_enable                       0x080013cb   Thumb Code    10  at32f421_tmr.o(i.tmr_counter_enable)
-    tmr_flag_clear                           0x080013d5   Thumb Code     6  at32f421_tmr.o(i.tmr_flag_clear)
-    tmr_flag_get                             0x080013db   Thumb Code    18  at32f421_tmr.o(i.tmr_flag_get)
-    tmr_interrupt_enable                     0x080013ed   Thumb Code    22  at32f421_tmr.o(i.tmr_interrupt_enable)
-    uart_dis_tx_en_rx                        0x08001405   Thumb Code    52  uart.o(i.uart_dis_tx_en_rx)
-    uart_init                                0x08001441   Thumb Code    20  uart.o(i.uart_init)
-    uart_rd_ring_buff                        0x0800145d   Thumb Code    60  uart.o(i.uart_rd_ring_buff)
-    uart_ring_buff_init                      0x0800149d   Thumb Code    12  uart.o(i.uart_ring_buff_init)
-    uart_rx_process_is_time_out              0x080014ad   Thumb Code    32  uart.o(i.uart_rx_process_is_time_out)
-    uart_rx_process_start_cnt                0x080014d1   Thumb Code    14  uart.o(i.uart_rx_process_start_cnt)
-    uart_rx_process_tmr_cnt                  0x080014e5   Thumb Code    34  uart.o(i.uart_rx_process_tmr_cnt)
-    uart_send_data                           0x0800150d   Thumb Code    70  uart.o(i.uart_send_data)
-    uart_wr_ring_buff                        0x0800156d   Thumb Code    54  uart.o(i.uart_wr_ring_buff)
-    usart_configuration                      0x080015a9   Thumb Code   136  main.o(i.usart_configuration)
-    usart_data_receive                       0x0800163d   Thumb Code     8  at32f421_usart.o(i.usart_data_receive)
-    usart_data_transmit                      0x08001645   Thumb Code     8  at32f421_usart.o(i.usart_data_transmit)
-    usart_enable                             0x0800164d   Thumb Code    10  at32f421_usart.o(i.usart_enable)
-    usart_flag_get                           0x08001657   Thumb Code    16  at32f421_usart.o(i.usart_flag_get)
-    usart_init                               0x08001669   Thumb Code   102  at32f421_usart.o(i.usart_init)
-    usart_interrupt_enable                   0x080016d5   Thumb Code    54  at32f421_usart.o(i.usart_interrupt_enable)
-    usart_receiver_enable                    0x0800170b   Thumb Code    10  at32f421_usart.o(i.usart_receiver_enable)
-    usart_transmitter_enable                 0x08001715   Thumb Code    10  at32f421_usart.o(i.usart_transmitter_enable)
-    CallbackTable                            0x08001720   Data          16  uart.o(.constdata)
-    Region$$Table$$Base                      0x08001768   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08001788   Number         0  anon$$obj.o(Region$$Table)
+    crm_periph_clock_enable                  0x08000ac9   Thumb Code    62  at32f421_crm.o(i.crm_periph_clock_enable)
+    crm_pll_config                           0x08000b0d   Thumb Code   224  at32f421_crm.o(i.crm_pll_config)
+    crm_reset                                0x08000c21   Thumb Code    90  at32f421_crm.o(i.crm_reset)
+    crm_sysclk_switch                        0x08000c85   Thumb Code    14  at32f421_crm.o(i.crm_sysclk_switch)
+    crm_sysclk_switch_status_get             0x08000c99   Thumb Code    10  at32f421_crm.o(i.crm_sysclk_switch_status_get)
+    delay_init                               0x08000ca9   Thumb Code    38  main.o(i.delay_init)
+    delay_ms                                 0x08000ce1   Thumb Code   110  main.o(i.delay_ms)
+    gpio_bits_write                          0x08000d55   Thumb Code    10  at32f421_gpio.o(i.gpio_bits_write)
+    gpio_configuration                       0x08000d61   Thumb Code   122  main.o(i.gpio_configuration)
+    gpio_default_para_init                   0x08000de1   Thumb Code    20  at32f421_gpio.o(i.gpio_default_para_init)
+    gpio_init                                0x08000df5   Thumb Code   122  at32f421_gpio.o(i.gpio_init)
+    gpio_input_data_bit_read                 0x08000e6f   Thumb Code    18  at32f421_gpio.o(i.gpio_input_data_bit_read)
+    gpio_pin_mux_config                      0x08000e81   Thumb Code    66  at32f421_gpio.o(i.gpio_pin_mux_config)
+    key_ball_sig                             0x08000ec5   Thumb Code    96  key.o(i.key_ball_sig)
+    main                                     0x08000f31   Thumb Code   190  main.o(i.main)
+    nvic_irq_enable                          0x08001005   Thumb Code   190  at32f421_misc.o(i.nvic_irq_enable)
+    nvic_priority_group_config               0x080010cd   Thumb Code    32  at32f421_misc.o(i.nvic_priority_group_config)
+    sound_play_sndx                          0x080010f5   Thumb Code    46  ball_game.o(i.sound_play_sndx)
+    sound_set_volume                         0x08001135   Thumb Code    36  ball_game.o(i.sound_set_volume)
+    sound_stop                               0x08001165   Thumb Code    32  ball_game.o(i.sound_stop)
+    system_clock_config                      0x08001191   Thumb Code   102  at32f421_clock.o(i.system_clock_config)
+    system_core_clock_update                 0x080011fd   Thumb Code   316  system_at32f421.o(i.system_core_clock_update)
+    systick_clock_source_config              0x08001351   Thumb Code    40  at32f421_misc.o(i.systick_clock_source_config)
+    tmr_base_init                            0x08001379   Thumb Code    16  at32f421_tmr.o(i.tmr_base_init)
+    tmr_cnt_dir_set                          0x08001389   Thumb Code    10  at32f421_tmr.o(i.tmr_cnt_dir_set)
+    tmr_counter_enable                       0x08001393   Thumb Code    10  at32f421_tmr.o(i.tmr_counter_enable)
+    tmr_flag_clear                           0x0800139d   Thumb Code     6  at32f421_tmr.o(i.tmr_flag_clear)
+    tmr_flag_get                             0x080013a3   Thumb Code    18  at32f421_tmr.o(i.tmr_flag_get)
+    tmr_interrupt_enable                     0x080013b5   Thumb Code    22  at32f421_tmr.o(i.tmr_interrupt_enable)
+    uart_dis_tx_en_rx                        0x080013cd   Thumb Code    52  uart.o(i.uart_dis_tx_en_rx)
+    uart_init                                0x08001409   Thumb Code    20  uart.o(i.uart_init)
+    uart_rd_ring_buff                        0x08001425   Thumb Code    60  uart.o(i.uart_rd_ring_buff)
+    uart_ring_buff_init                      0x08001465   Thumb Code    12  uart.o(i.uart_ring_buff_init)
+    uart_rx_process_is_time_out              0x08001475   Thumb Code    32  uart.o(i.uart_rx_process_is_time_out)
+    uart_rx_process_start_cnt                0x08001499   Thumb Code    14  uart.o(i.uart_rx_process_start_cnt)
+    uart_rx_process_tmr_cnt                  0x080014ad   Thumb Code    34  uart.o(i.uart_rx_process_tmr_cnt)
+    uart_send_data                           0x080014d5   Thumb Code    70  uart.o(i.uart_send_data)
+    uart_wr_ring_buff                        0x08001535   Thumb Code    54  uart.o(i.uart_wr_ring_buff)
+    usart_configuration                      0x08001571   Thumb Code   136  main.o(i.usart_configuration)
+    usart_data_receive                       0x08001605   Thumb Code     8  at32f421_usart.o(i.usart_data_receive)
+    usart_data_transmit                      0x0800160d   Thumb Code     8  at32f421_usart.o(i.usart_data_transmit)
+    usart_enable                             0x08001615   Thumb Code    10  at32f421_usart.o(i.usart_enable)
+    usart_flag_get                           0x0800161f   Thumb Code    16  at32f421_usart.o(i.usart_flag_get)
+    usart_init                               0x08001631   Thumb Code   102  at32f421_usart.o(i.usart_init)
+    usart_interrupt_enable                   0x0800169d   Thumb Code    54  at32f421_usart.o(i.usart_interrupt_enable)
+    usart_receiver_enable                    0x080016d3   Thumb Code    10  at32f421_usart.o(i.usart_receiver_enable)
+    usart_transmitter_enable                 0x080016dd   Thumb Code    10  at32f421_usart.o(i.usart_transmitter_enable)
+    CallbackTable                            0x080016e8   Data          16  uart.o(.constdata)
+    Region$$Table$$Base                      0x08001730   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08001750   Number         0  anon$$obj.o(Region$$Table)
     tx_size                                  0x20000018   Data           2  uart.o(.data)
     tx_count                                 0x2000001a   Data           2  uart.o(.data)
     tx_p                                     0x2000001c   Data           4  uart.o(.data)
@@ -1336,9 +1334,9 @@ Memory Map of the image
 
   Image Entry point : 0x080000cd
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000017d4, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000179c, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001788, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00001750, Max: 0x00010000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -1431,80 +1429,78 @@ Memory Map of the image
     0x0800088c   0x0800088c   0x00000060   Code   RO         2148    i.crm_clock_source_enable  at32f421_crm.o
     0x080008ec   0x080008ec   0x000001ac   Code   RO         2149    i.crm_clocks_freq_get  at32f421_crm.o
     0x08000a98   0x08000a98   0x00000030   Code   RO         2153    i.crm_flag_get      at32f421_crm.o
-    0x08000ac8   0x08000ac8   0x0000002e   Code   RO         2155    i.crm_hext_stable_wait  at32f421_crm.o
-    0x08000af6   0x08000af6   0x00000002   PAD
-    0x08000af8   0x08000af8   0x00000044   Code   RO         2162    i.crm_periph_clock_enable  at32f421_crm.o
-    0x08000b3c   0x08000b3c   0x00000114   Code   RO         2165    i.crm_pll_config    at32f421_crm.o
-    0x08000c50   0x08000c50   0x00000064   Code   RO         2167    i.crm_reset         at32f421_crm.o
-    0x08000cb4   0x08000cb4   0x00000014   Code   RO         2168    i.crm_sysclk_switch  at32f421_crm.o
-    0x08000cc8   0x08000cc8   0x00000010   Code   RO         2169    i.crm_sysclk_switch_status_get  at32f421_crm.o
-    0x08000cd8   0x08000cd8   0x00000038   Code   RO          214    i.delay_init        main.o
-    0x08000d10   0x08000d10   0x00000074   Code   RO          215    i.delay_ms          main.o
-    0x08000d84   0x08000d84   0x0000000a   Code   RO         2346    i.gpio_bits_write   at32f421_gpio.o
-    0x08000d8e   0x08000d8e   0x00000002   PAD
-    0x08000d90   0x08000d90   0x00000080   Code   RO          218    i.gpio_configuration  main.o
-    0x08000e10   0x08000e10   0x00000014   Code   RO         2347    i.gpio_default_para_init  at32f421_gpio.o
-    0x08000e24   0x08000e24   0x0000007a   Code   RO         2348    i.gpio_init         at32f421_gpio.o
-    0x08000e9e   0x08000e9e   0x00000012   Code   RO         2349    i.gpio_input_data_bit_read  at32f421_gpio.o
-    0x08000eb0   0x08000eb0   0x00000042   Code   RO         2353    i.gpio_pin_mux_config  at32f421_gpio.o
-    0x08000ef2   0x08000ef2   0x00000002   PAD
-    0x08000ef4   0x08000ef4   0x0000006c   Code   RO          391    i.key_ball_sig      key.o
-    0x08000f60   0x08000f60   0x000000d4   Code   RO          219    i.main              main.o
-    0x08001034   0x08001034   0x000000c8   Code   RO         2447    i.nvic_irq_enable   at32f421_misc.o
-    0x080010fc   0x080010fc   0x00000028   Code   RO         2449    i.nvic_priority_group_config  at32f421_misc.o
-    0x08001124   0x08001124   0x00000040   Code   RO         3110    i.sound_play_sndx   ball_game.o
-    0x08001164   0x08001164   0x00000030   Code   RO         3111    i.sound_set_volume  ball_game.o
-    0x08001194   0x08001194   0x0000002c   Code   RO         3112    i.sound_stop        ball_game.o
-    0x080011c0   0x080011c0   0x00000074   Code   RO            4    i.system_clock_config  at32f421_clock.o
-    0x08001234   0x08001234   0x00000154   Code   RO         3070    i.system_core_clock_update  system_at32f421.o
-    0x08001388   0x08001388   0x00000028   Code   RO         2452    i.systick_clock_source_config  at32f421_misc.o
-    0x080013b0   0x080013b0   0x00000010   Code   RO         2510    i.tmr_base_init     at32f421_tmr.o
-    0x080013c0   0x080013c0   0x0000000a   Code   RO         2520    i.tmr_cnt_dir_set   at32f421_tmr.o
-    0x080013ca   0x080013ca   0x0000000a   Code   RO         2521    i.tmr_counter_enable  at32f421_tmr.o
-    0x080013d4   0x080013d4   0x00000006   Code   RO         2533    i.tmr_flag_clear    at32f421_tmr.o
-    0x080013da   0x080013da   0x00000012   Code   RO         2534    i.tmr_flag_get      at32f421_tmr.o
-    0x080013ec   0x080013ec   0x00000016   Code   RO         2542    i.tmr_interrupt_enable  at32f421_tmr.o
-    0x08001402   0x08001402   0x00000002   PAD
-    0x08001404   0x08001404   0x0000003c   Code   RO          299    i.uart_dis_tx_en_rx  uart.o
-    0x08001440   0x08001440   0x0000001c   Code   RO          300    i.uart_init         uart.o
-    0x0800145c   0x0800145c   0x00000040   Code   RO          301    i.uart_rd_ring_buff  uart.o
-    0x0800149c   0x0800149c   0x00000010   Code   RO          302    i.uart_ring_buff_init  uart.o
-    0x080014ac   0x080014ac   0x00000024   Code   RO          303    i.uart_rx_process_is_time_out  uart.o
-    0x080014d0   0x080014d0   0x00000014   Code   RO          304    i.uart_rx_process_start_cnt  uart.o
-    0x080014e4   0x080014e4   0x00000028   Code   RO          305    i.uart_rx_process_tmr_cnt  uart.o
-    0x0800150c   0x0800150c   0x00000060   Code   RO          306    i.uart_send_data    uart.o
-    0x0800156c   0x0800156c   0x0000003c   Code   RO          307    i.uart_wr_ring_buff  uart.o
-    0x080015a8   0x080015a8   0x00000094   Code   RO          220    i.usart_configuration  main.o
-    0x0800163c   0x0800163c   0x00000008   Code   RO         2868    i.usart_data_receive  at32f421_usart.o
-    0x08001644   0x08001644   0x00000008   Code   RO         2869    i.usart_data_transmit  at32f421_usart.o
-    0x0800164c   0x0800164c   0x0000000a   Code   RO         2872    i.usart_enable      at32f421_usart.o
-    0x08001656   0x08001656   0x00000010   Code   RO         2874    i.usart_flag_get    at32f421_usart.o
-    0x08001666   0x08001666   0x00000002   PAD
-    0x08001668   0x08001668   0x0000006c   Code   RO         2876    i.usart_init        at32f421_usart.o
-    0x080016d4   0x080016d4   0x00000036   Code   RO         2877    i.usart_interrupt_enable  at32f421_usart.o
-    0x0800170a   0x0800170a   0x0000000a   Code   RO         2883    i.usart_receiver_enable  at32f421_usart.o
-    0x08001714   0x08001714   0x0000000a   Code   RO         2891    i.usart_transmitter_enable  at32f421_usart.o
-    0x0800171e   0x0800171e   0x00000002   PAD
-    0x08001720   0x08001720   0x00000010   Data   RO          309    .constdata          uart.o
-    0x08001730   0x08001730   0x00000028   Data   RO         2170    .constdata          at32f421_crm.o
-    0x08001758   0x08001758   0x00000010   Data   RO         3071    .constdata          system_at32f421.o
-    0x08001768   0x08001768   0x00000020   Data   RO         3355    Region$$Table       anon$$obj.o
+    0x08000ac8   0x08000ac8   0x00000044   Code   RO         2162    i.crm_periph_clock_enable  at32f421_crm.o
+    0x08000b0c   0x08000b0c   0x00000114   Code   RO         2165    i.crm_pll_config    at32f421_crm.o
+    0x08000c20   0x08000c20   0x00000064   Code   RO         2167    i.crm_reset         at32f421_crm.o
+    0x08000c84   0x08000c84   0x00000014   Code   RO         2168    i.crm_sysclk_switch  at32f421_crm.o
+    0x08000c98   0x08000c98   0x00000010   Code   RO         2169    i.crm_sysclk_switch_status_get  at32f421_crm.o
+    0x08000ca8   0x08000ca8   0x00000038   Code   RO          214    i.delay_init        main.o
+    0x08000ce0   0x08000ce0   0x00000074   Code   RO          215    i.delay_ms          main.o
+    0x08000d54   0x08000d54   0x0000000a   Code   RO         2346    i.gpio_bits_write   at32f421_gpio.o
+    0x08000d5e   0x08000d5e   0x00000002   PAD
+    0x08000d60   0x08000d60   0x00000080   Code   RO          218    i.gpio_configuration  main.o
+    0x08000de0   0x08000de0   0x00000014   Code   RO         2347    i.gpio_default_para_init  at32f421_gpio.o
+    0x08000df4   0x08000df4   0x0000007a   Code   RO         2348    i.gpio_init         at32f421_gpio.o
+    0x08000e6e   0x08000e6e   0x00000012   Code   RO         2349    i.gpio_input_data_bit_read  at32f421_gpio.o
+    0x08000e80   0x08000e80   0x00000042   Code   RO         2353    i.gpio_pin_mux_config  at32f421_gpio.o
+    0x08000ec2   0x08000ec2   0x00000002   PAD
+    0x08000ec4   0x08000ec4   0x0000006c   Code   RO          391    i.key_ball_sig      key.o
+    0x08000f30   0x08000f30   0x000000d4   Code   RO          219    i.main              main.o
+    0x08001004   0x08001004   0x000000c8   Code   RO         2447    i.nvic_irq_enable   at32f421_misc.o
+    0x080010cc   0x080010cc   0x00000028   Code   RO         2449    i.nvic_priority_group_config  at32f421_misc.o
+    0x080010f4   0x080010f4   0x00000040   Code   RO         3110    i.sound_play_sndx   ball_game.o
+    0x08001134   0x08001134   0x00000030   Code   RO         3111    i.sound_set_volume  ball_game.o
+    0x08001164   0x08001164   0x0000002c   Code   RO         3112    i.sound_stop        ball_game.o
+    0x08001190   0x08001190   0x0000006c   Code   RO            4    i.system_clock_config  at32f421_clock.o
+    0x080011fc   0x080011fc   0x00000154   Code   RO         3070    i.system_core_clock_update  system_at32f421.o
+    0x08001350   0x08001350   0x00000028   Code   RO         2452    i.systick_clock_source_config  at32f421_misc.o
+    0x08001378   0x08001378   0x00000010   Code   RO         2510    i.tmr_base_init     at32f421_tmr.o
+    0x08001388   0x08001388   0x0000000a   Code   RO         2520    i.tmr_cnt_dir_set   at32f421_tmr.o
+    0x08001392   0x08001392   0x0000000a   Code   RO         2521    i.tmr_counter_enable  at32f421_tmr.o
+    0x0800139c   0x0800139c   0x00000006   Code   RO         2533    i.tmr_flag_clear    at32f421_tmr.o
+    0x080013a2   0x080013a2   0x00000012   Code   RO         2534    i.tmr_flag_get      at32f421_tmr.o
+    0x080013b4   0x080013b4   0x00000016   Code   RO         2542    i.tmr_interrupt_enable  at32f421_tmr.o
+    0x080013ca   0x080013ca   0x00000002   PAD
+    0x080013cc   0x080013cc   0x0000003c   Code   RO          299    i.uart_dis_tx_en_rx  uart.o
+    0x08001408   0x08001408   0x0000001c   Code   RO          300    i.uart_init         uart.o
+    0x08001424   0x08001424   0x00000040   Code   RO          301    i.uart_rd_ring_buff  uart.o
+    0x08001464   0x08001464   0x00000010   Code   RO          302    i.uart_ring_buff_init  uart.o
+    0x08001474   0x08001474   0x00000024   Code   RO          303    i.uart_rx_process_is_time_out  uart.o
+    0x08001498   0x08001498   0x00000014   Code   RO          304    i.uart_rx_process_start_cnt  uart.o
+    0x080014ac   0x080014ac   0x00000028   Code   RO          305    i.uart_rx_process_tmr_cnt  uart.o
+    0x080014d4   0x080014d4   0x00000060   Code   RO          306    i.uart_send_data    uart.o
+    0x08001534   0x08001534   0x0000003c   Code   RO          307    i.uart_wr_ring_buff  uart.o
+    0x08001570   0x08001570   0x00000094   Code   RO          220    i.usart_configuration  main.o
+    0x08001604   0x08001604   0x00000008   Code   RO         2868    i.usart_data_receive  at32f421_usart.o
+    0x0800160c   0x0800160c   0x00000008   Code   RO         2869    i.usart_data_transmit  at32f421_usart.o
+    0x08001614   0x08001614   0x0000000a   Code   RO         2872    i.usart_enable      at32f421_usart.o
+    0x0800161e   0x0800161e   0x00000010   Code   RO         2874    i.usart_flag_get    at32f421_usart.o
+    0x0800162e   0x0800162e   0x00000002   PAD
+    0x08001630   0x08001630   0x0000006c   Code   RO         2876    i.usart_init        at32f421_usart.o
+    0x0800169c   0x0800169c   0x00000036   Code   RO         2877    i.usart_interrupt_enable  at32f421_usart.o
+    0x080016d2   0x080016d2   0x0000000a   Code   RO         2883    i.usart_receiver_enable  at32f421_usart.o
+    0x080016dc   0x080016dc   0x0000000a   Code   RO         2891    i.usart_transmitter_enable  at32f421_usart.o
+    0x080016e6   0x080016e6   0x00000002   PAD
+    0x080016e8   0x080016e8   0x00000010   Data   RO          309    .constdata          uart.o
+    0x080016f8   0x080016f8   0x00000028   Data   RO         2170    .constdata          at32f421_crm.o
+    0x08001720   0x08001720   0x00000010   Data   RO         3071    .constdata          system_at32f421.o
+    0x08001730   0x08001730   0x00000020   Data   RO         3355    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001788, Size: 0x000007e8, Max: 0x00004000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08001750, Size: 0x000007e8, Max: 0x00004000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08001788   0x00000014   Data   RW          222    .data               main.o
-    0x20000014   0x0800179c   0x00000012   Data   RW          310    .data               uart.o
-    0x20000026   0x080017ae   0x00000006   Data   RW          393    .data               key.o
-    0x2000002c   0x080017b4   0x00000004   Data   RW         3072    .data               system_at32f421.o
-    0x20000030   0x080017b8   0x00000019   Data   RW         3114    .data               ball_game.o
-    0x20000049   0x080017d1   0x00000003   PAD
+    0x20000000   0x08001750   0x00000014   Data   RW          222    .data               main.o
+    0x20000014   0x08001764   0x00000012   Data   RW          310    .data               uart.o
+    0x20000026   0x08001776   0x00000006   Data   RW          393    .data               key.o
+    0x2000002c   0x0800177c   0x00000004   Data   RW         3072    .data               system_at32f421.o
+    0x20000030   0x08001780   0x00000019   Data   RW         3114    .data               ball_game.o
+    0x20000049   0x08001799   0x00000003   PAD
     0x2000004c        -       0x00000014   Zero   RW          221    .bss                main.o
     0x20000060        -       0x00000038   Zero   RW          308    .bss                uart.o
     0x20000098        -       0x0000000a   Zero   RW         3113    .bss                ball_game.o
-    0x200000a2   0x080017d1   0x00000002   PAD
+    0x200000a2   0x08001799   0x00000002   PAD
     0x200000a4        -       0x000000e4   Zero   RW         3183    .bss                c_w.l(rand.o)
     0x20000188        -       0x00000060   Zero   RW         3282    .bss                c_w.l(libspace.o)
     0x200001e8        -       0x00000200   Zero   RW         3060    HEAP                startup_at32f421.o
@@ -1518,24 +1514,24 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       116          4          0          0          0      39458   at32f421_clock.o
-      1198        154         40          0          0       8264   at32f421_crm.o
-       236          0          0          0          0       3500   at32f421_gpio.o
-        26          0          0          0          0       4706   at32f421_int.o
-       280         18          0          0          0      32536   at32f421_misc.o
-        82          0          0          0          0       3782   at32f421_tmr.o
-       224          6          0          0          0       5196   at32f421_usart.o
-       706         98          0         25         10       4682   ball_game.o
-       108         12          0          6          0        571   key.o
-       728         80          0         20         20       4686   main.o
-        64         26        204          0       1536        880   startup_at32f421.o
-       448         36         16          4          0       2236   system_at32f421.o
-       852        124         16         18         56       7056   uart.o
+       108          6          0          0          0      39370   at32f421_clock.o
+      1152        154         40          0          0       7529   at32f421_crm.o
+       236          0          0          0          0       3436   at32f421_gpio.o
+        26          0          0          0          0       4594   at32f421_int.o
+       280         18          0          0          0      32488   at32f421_misc.o
+        82          0          0          0          0       3706   at32f421_tmr.o
+       224          6          0          0          0       5096   at32f421_usart.o
+       706         98          0         25         10       4598   ball_game.o
+       108         12          0          6          0        559   key.o
+       728         80          0         20         20       4574   main.o
+        64         26        204          0       1536        868   startup_at32f421.o
+       448         36         16          4          0       2196   system_at32f421.o
+       852        124         16         18         56       6916   uart.o
 
     ----------------------------------------------------------------------
-      5082        558        308         76       1624     117553   Object Totals
+      5026        560        308         76       1624     115930   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        14          0          0          3          2          0   (incl. Padding)
+        12          0          0          3          2          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -1584,15 +1580,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      5716        592        308         76       1948     114545   Grand Totals
-      5716        592        308         76       1948     114545   ELF Image Totals
-      5716        592        308         76          0          0   ROM Totals
+      5660        594        308         76       1948     112974   Grand Totals
+      5660        594        308         76       1948     112974   ELF Image Totals
+      5660        594        308         76          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 6024 (   5.88kB)
+    Total RO  Size (Code + RO Data)                 5968 (   5.83kB)
     Total RW  Size (RW Data + ZI Data)              2024 (   1.98kB)
-    Total ROM Size (Code + RO Data + RW Data)       6100 (   5.96kB)
+    Total ROM Size (Code + RO Data + RW Data)       6044 (   5.90kB)
 
 ==============================================================================
 

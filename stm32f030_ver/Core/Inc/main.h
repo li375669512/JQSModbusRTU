@@ -57,23 +57,23 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define LED0_Pin GPIO_PIN_0
-#define LED0_GPIO_Port GPIOA
-#define IN1_Pin GPIO_PIN_1
-#define IN1_GPIO_Port GPIOA
-#define IN2_Pin GPIO_PIN_2
-#define IN2_GPIO_Port GPIOA
-#define IN3_Pin GPIO_PIN_3
-#define IN3_GPIO_Port GPIOA
-#define BUTTON_Pin GPIO_PIN_4
-#define BUTTON_GPIO_Port GPIOA
-#define Relay3_Pin GPIO_PIN_6
-#define Relay3_GPIO_Port GPIOA
-#define Relay2_Pin GPIO_PIN_7
-#define Relay2_GPIO_Port GPIOA
-#define Relay1_Pin GPIO_PIN_1
-#define Relay1_GPIO_Port GPIOB
-#define RS485_CTR_Pin GPIO_PIN_5
+#define LED0_Pin            GPIO_PIN_0
+#define LED0_GPIO_Port      GPIOA
+#define IN1_Pin             GPIO_PIN_1
+#define IN1_GPIO_Port       GPIOA
+#define IN2_Pin             GPIO_PIN_2
+#define IN2_GPIO_Port       GPIOA
+#define IN3_Pin             GPIO_PIN_3
+#define IN3_GPIO_Port       GPIOA
+#define BUTTON_Pin          GPIO_PIN_4
+#define BUTTON_GPIO_Port    GPIOA
+#define Relay3_Pin          GPIO_PIN_6
+#define Relay3_GPIO_Port    GPIOA
+#define Relay2_Pin          GPIO_PIN_7
+#define Relay2_GPIO_Port    GPIOA
+#define Relay1_Pin          GPIO_PIN_1
+#define Relay1_GPIO_Port    GPIOB
+#define RS485_CTR_Pin       GPIO_PIN_5
 #define RS485_CTR_GPIO_Port GPIOA
 /* USER CODE BEGIN Private defines */
 

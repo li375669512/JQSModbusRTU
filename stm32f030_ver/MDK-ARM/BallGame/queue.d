@@ -1,0 +1,15 @@
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/queue.c
+ballgame\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+ballgame\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h
+ballgame\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
+ballgame\queue.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+ballgame\queue.o: ../Core/Inc/FreeRTOSConfig.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/portable.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/deprecated_definitions.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM0/portmacro.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+ballgame\queue.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h
